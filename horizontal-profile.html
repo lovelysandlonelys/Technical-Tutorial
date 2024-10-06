@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the basics of a technical topic through this step-by-step tutorial">
+    <title>Technical Tutorial</title>
+    <link rel="stylesheet" href="horizontal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Technical Tutorial: Using C++ and Visual Studio Code</h1>
+        <button class="hamburger" id="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#section1">Installing Visual Studio Code</a></li>
+                <li><a href="#section2">Organizing Development Folder</a></li>
+                <li><a href="#section3">Installing C++ Extension</a></li>
+                <li><a href="#section4">Troubleshooting C++ Extension</a></li>
+                <li><a href="#section5">Running Simple C++ Program</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            
+            <section id="section1" class="card">
+                <h2>Installing Visual Studio Code</h2>
+                <p>content here</p>
+            </section>
+
+            <section id="section2" class="card">
+                <h2>Organizing Development Folder</h2>
+                <p>content here</p>
+            </section>
+
+            <section id="section3" class="card">
+                <h2>Installing C++ Extension</h2>
+                <p>Content Here</p>
+            </section>
+
+            <section id="section4" class="card">
+                <h2>Troubleshooting C++ Extension</h2>
+                <p>content here</p>
+            </section>
+    
+
+            <section id="section5" class="card">
+                <h2>Running Simple C++ Program</h2>
+                <p>content</p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Technical Tutorials By SSB </p>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const sidebar = document.getElementById('sidebar');
+        
+        hamburgerBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+    </script>
+
+</body>
+</html>
