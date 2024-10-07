@@ -21,21 +21,50 @@ header h1 {
     font-size: 24px;
 }
 
-.hamburger {
-    position: absolute;
-    right: 20px;
-    top: 15px;
+.author-icon {
+    color: white;
+    position: absolute; /* Positioning */
+    right: 20px; /* Adjust right position */
+    top: 20px; /* Adjust top position */
     background: none;
     border: none;
     font-size: 24px;
-    color: white;
     cursor: pointer;
-    display: none;
 }
+
+.author-icon:hover {
+    color: #bfe2fc;
+}
+
+/* back button on author page */
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    color: white;
+    background-color: #007acc;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Positioning */
+    right: 20px; /* Adjust right position */
+    top: 2px; /* Adjust top position */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #005ea2;
+}
+
 
 /* Sidebar styles */
 .container {
     display: flex;
+    flex-grow: 1; /* Allow main content to take the remaining space */
+    transition: margin-left 0.3s; /* Smooth transition for main content */
 }
 
 .sidebar {
@@ -133,10 +162,6 @@ pre code {
     .content {
         margin-left: 0;
     }
-
-    .hamburger {
-        display: block;
-    }
 }
 
 /* Footer styles */
@@ -149,3 +174,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
