@@ -23,9 +23,9 @@
             <ul>
                 <li><a href="#section1"><i class="fas fa-star"></i> Introduction</a></li>
                 <li><a href="#section2"><i class="fas fa-star"></i> Installing Visual Studio Code</a></li>
-                <li><a href="#section3"><i class="fas fa-star"></i> Optional: Organizing Development Folder</a></li>
-                <li><a href="#section4"><i class="fas fa-star"></i> Installing C++ Extension</a></li>
-                <li><a href="#section5"><i class="fas fa-star"></i> Troubleshooting C++ Extension</a></li>
+                <li><a href="#section3"><i class="fas fa-star"></i> Installing C++ Compiler</a></li>
+                <li><a href="#section4"><i class="fas fa-star"></i> Optional: Organizing Development Folder</a></li>
+                <li><a href="#section5"><i class="fas fa-star"></i> Installing C++ Extension</a></li>
                 <li><a href="#section6"><i class="fas fa-star"></i> Running Simple C++ Program</a></li>
                 <li><a href="#section7"><i class="fas fa-star"></i> Conclusion</a></li>
             </ul>
@@ -106,12 +106,13 @@
                 <p>To check if you already have them installed:</p>
                 <ol>
                     <li>Open a new VS Code terminal window.</li>
-                    <li>Use the following command to check for the GCC compiler:</li>
+                    <li>
+                        Use the following command to check for the GCC compiler:
+                        <pre><code>gcc --version
+g++ --version
+gdb --version</code></pre>
+                    </li>
                 </ol>
-                <pre><code>gcc --version
-                    g++ --version
-                    gdb --version
-                </code></pre>
                 <p>
                     If no details are shown when running these command then you 
                     do not have a C++ compiler accessible to VS Code and can 
@@ -172,9 +173,8 @@
                             <li>
                                 Relaunch VS Code and open a new terminal and type:
                                 <pre><code>gcc --version
-                                    g++ --version
-                                    gdb --version
-                                </code></pre>
+g++ --version
+gdb --version</code></pre>
                             </li>
                         </ol> 
                         You should see output that states which versions of GCC, g++ and GDB you have installed.
@@ -182,19 +182,14 @@
                 </ol>
             </section>
 
-            <section id="section3" class="card">
+            <section id="section4" class="card">
                 <h2><i class="fas fa-star"></i> Optional: Organizing Development Folder</h2>
                 <p>content here</p>
             </section>
 
-            <section id="section4" class="card">
+            <section id="section5" class="card">
                 <h2><i class="fas fa-star"></i> Installing C++ Extension</h2>
                 <p>Content Here</p>
-            </section>
-
-            <section id="section5" class="card">
-                <h2><i class="fas fa-star"></i> Troubleshooting C++ Extension</h2>
-                <p>content here</p>
             </section>
     
             <section id="section6" class="card">
