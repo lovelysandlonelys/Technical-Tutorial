@@ -23,7 +23,7 @@
             <ul>
                 <li><a href="#section1"><i class="fas fa-star"></i> Introduction</a></li>
                 <li><a href="#section2"><i class="fas fa-star"></i> Installing Visual Studio Code</a></li>
-                <li><a href="#section3"><i class="fas fa-star"></i> Organizing Development Folder</a></li>
+                <li><a href="#section3"><i class="fas fa-star"></i> Optional: Organizing Development Folder</a></li>
                 <li><a href="#section4"><i class="fas fa-star"></i> Installing C++ Extension</a></li>
                 <li><a href="#section5"><i class="fas fa-star"></i> Troubleshooting C++ Extension</a></li>
                 <li><a href="#section6"><i class="fas fa-star"></i> Running Simple C++ Program</a></li>
@@ -35,22 +35,155 @@
             
             <section id="section1" class="card">
                 <h2><i class="fas fa-star"></i> Introduction</h2>
-                <p>Things to Include in Introduction</p>
-                <ul>
-                    <li>What will the reader learn?</li>
-                    <li>What skills will the reader need?</li>
-                    <li>What problem does this technology help solve?</li>
-                </ul>
+                <p>
+                    As the world continues to adapt with better technology driven 
+                    applications, students will have access to more practical tools. 
+                    By learning these tools early, students will have an easier time 
+                    collaborating, learning, and programming. Visual Studio Code is 
+                    an application that supports many of the most common programming 
+                    languages, all in one application. The caveat to this is the 
+                    necessity of a compiler, which must be installed outside of Visual 
+                    Studio Code. This process can be confusing, so this tutorial seeks 
+                    to accurately explain the steps needed to install Visual Studio 
+                    Code itself, the C++ Extension, and a compatible C++ Compiler for 
+                    the platform. Through this tutorial, the user will need to have 
+                    basic coding knowledge, ability to follow an algorithm, and a lot 
+                    of patience. This tutorial intends to solve the issue of the 
+                    complicated, and slightly unclear, process to be able to program 
+                    in and compile C++ in Visual Studio Code. After these instructions, 
+                    the user should be able to successfully install Visual Studio Code, 
+                    the C++ Extension, a compatible C++ Compiler, and run a small C++ 
+                    program to demonstrate. 
+                </p>
             </section>
 
             <section id="section2" class="card">
                 <h2><i class="fas fa-star"></i> Installing Visual Studio Code</h2>
                 <img src="vscode.png" alt="VS Code Logo" class="vscode-logo">
-                <p>content here</p>
+                <h3>Background</h3>
+                <p>
+                    Visual Studio Code (VS Code) is a popular, lightweight, and 
+                    open-source integrated development environment (IDE). In an 
+                    article originally written and published on Triplebyte.com, 
+                    and since moved to Medium.com, Charlie Treichler found that 16.8 
+                    percent of candidates interviewing at Triplebyte used Visual Studio 
+                    Code.
+                </p>
+                <img src="vs_code_graph.png" alt="VS Code Graph" class="vscode-logo">
+                <p>
+                    VS Code is a rising technology in the tech industry, and it's 
+                    wide range of capabilities including debugging tools, an integrated 
+                    terminal, and version control integration, makes it an attractive 
+                    candidate for any coder's IDE. 
+                </p>
+                <h3>Instructions</h3>
+                <p>
+                    The installation of VS Code is as easy as clicking a 
+                    <a href="https://code.visualstudio.com/download">button</a>. 
+                    The link provided goes to the download page for visual studio 
+                    code where all you need to do is select the appropriate version 
+                    for your computer and then run through the installation pop ups. 
+                    You don't need to change any of the default settings for this 
+                    tutorial.
+                </p>
             </section>
 
             <section id="section3" class="card">
-                <h2><i class="fas fa-star"></i> Organizing Development Folder</h2>
+                <h2><i class="fas fa-star"></i> Installing C++ Compiler</h2>
+                <h3>Background</h3>
+                <p>
+                    C++ is a compiled language, meaning your program's source code 
+                    must be translated into machine code (compiled) before it can be 
+                    run on your computer. The C/C++ extension that we will walk you 
+                    through installing later on in the tutorial doesn't include a C++ 
+                    compiler or debugger, since VS Code as an editor relies on 
+                    command-line tools for the development workflow. You need to 
+                    install these tools or use the tools already installed on your 
+                    computer.
+                </p>
+                <h3>Instructions</h3>
+                <h4>Check Computer for Compiler</h4>
+                <p>To check if you already have them installed:</p>
+                <ol>
+                    <li>Open a new VS Code terminal window.</li>
+                    <li>Use the following command to check for the GCC compiler:</li>
+                </ol>
+                <pre><code>gcc --version
+                    g++ --version
+                    gdb --version
+                </code></pre>
+                <p>
+                    If no details are shown when running these command then you 
+                    do not have a C++ compiler accessible to VS Code and can 
+                    proceed to the next step. 
+                </p>
+                <h4>Install Compiler</h4>
+                <p>
+                    In this tutorial, we teach you how to install a MinGW compiler. 
+                    Mingw-w64 was created to support the GCC compiler on Windows 
+                    systems.
+                </p>
+                <ol>
+                    <li>
+                        You can download the latest installer from the MSYS2 page 
+                        or use this <a heref="https://github.com/msys2/msys2-installer/releases/download/2024-01-13/msys2-x86_64-20240113.exe">direct link to the installer</a>.
+                    </li>
+                    <li>
+                        Run the installer and follow the steps of the installation wizard. 
+                        Note that MSYS2 requires 64 bit Windows 8.1 or newer.
+                    </li>   
+                    <li>
+                        In the wizard, choose your desired Installation Folder. 
+                        Record this directory for later. In most cases, the recommended 
+                        directory is acceptable. The same applies when you get to setting 
+                        the start menu shortcuts step.
+                    </li>
+                    <li>
+                        When complete, ensure the Run MSYS2 now box is checked and select Finish. 
+                        This will open a MSYS2 terminal window for you
+                    </li>
+                    <li>
+                        In this terminal, install the MinGW-w64 toolchain by running the 
+                        following command:
+                        <pre><code>pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain</code></pre>
+                    </li>
+                    <li>
+                        Accept the default number of packages in the toolchain group by pressing Enter
+                    </li>
+                    <li>
+                        Enter Y when prompted whether to proceed with the installation
+                    </li>
+                    <li>
+                        Add the path of your MinGW-w64 bin folder to the Windows PATH 
+                        environment variable by using the following steps:
+                        <ol>
+                            <li>In the Windows search bar, type Settings to open your Windows Settings.</li> 
+                            <li>Search for Edit environment variables for your account</li>
+                            <li>In your User variables, select the Path variable and then select Edit.</li>
+                            <li>Select New and add the MinGW-w64 destination folder you recorded during the installation process to the list. If you used the default settings above, then this will be the path: C:\msys64\ucrt64\bin.</li>
+                            <li>Select OK, and then select OK again in the Environment Variables window to update the PATH environment variable. You have to reopen any console windows for the updated PATH environment variable to be available.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Check that your compiler has installed:
+                        <ol>
+                            <li>Close the terminal you have open in VS Code.</li>
+                            <li>Close out of VS Code.</li>
+                            <li>
+                                Relaunch VS Code and open a new terminal and type:
+                                <pre><code>gcc --version
+                                    g++ --version
+                                    gdb --version
+                                </code></pre>
+                            </li>
+                        </ol> 
+                        You should see output that states which versions of GCC, g++ and GDB you have installed.
+                    </li>             
+                </ol>
+            </section>
+
+            <section id="section3" class="card">
+                <h2><i class="fas fa-star"></i> Optional: Organizing Development Folder</h2>
                 <p>content here</p>
             </section>
 
