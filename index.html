@@ -287,17 +287,75 @@ gdb --version</code></pre>
     
             <section id="section6" class="card">
                 <h2><i class="fas fa-star"></i> Running Simple C++ Program</h2>
-                <p>We will most likely have a code snippet here: </p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;My First Page&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+                <p>
+                    To begin coding in C++, first, you will need to create a new folder for 
+                    your C++ project. You can do this by navigating to where you want this folder
+                    in your file explorer, creating the folder (for example simple_c++_program), 
+                    and then opening this folder in Visual Studio Code. 
+                </p>
+                <p>
+                    To open a folder in Visual Studio Code navigate to the file tab 
+                    at the top of VS Code and then click Open Folder. This will open a 
+                    file explorer window where you can navigate to the folder you 
+                    just created. 
+                </p>
+                <p> 
+                    Now that you are in your project folder you can create a C++ file 
+                    and start coding! To create your C++ file find the new file button. 
+                    Click on the “new file” button and name the file. Be sure to add '.cpp' 
+                    to the name to ensure it is a C++ file.
+                </p>
+                <p>
+                    After it should look something like this: 
+                </p>
+                <p>
+                    Once you set up your file, you are free to begin coding! 
+                    Here is a sample of code to test that the compiler works.
+                </p>
+    <pre><code>#include <iostream>
+using namespace std;
+        
+    int main()
+    {
+        int a, b, c;
+        
+        cout << "Enter an integer a: ";
+        cin >> a;
+    
+        cout << "Enter an integer to multiply with a: ";
+        cin >> b;
+        //this should print 11*b
+        cout << "a * b is: " << a*b << endl;
+    
+        cout << "Enter another integer: ";
+        cin >> c;
+        //this should print b*c + 11
+        cout <<  "b * c + a is: " << b*c + a << endl;
+    
+        return 0;
+    }
 </code></pre>
+                <p>
+                    Next, to run the code to test it, click on the small triangle 
+                    in the top right corner, open the drop down,  and select “Run 
+                    C/C++ File” 
+                </p>
+
+                <p>
+                    At the bottom of the Terminal will output the first cout line and 
+                    prompt the user to enter an integer.
+                </p>
+
+                <p>
+                    Enter an integer and follow the chain until the program concludes.
+                </p>
+                <p>
+                    From here, you can modify this C++ file as you please, or you can create a new project.
+                </p>
+                <p>
+                    To reset or stop the current instance of the program, 
+                    click the respective symbol at the top of the screen.
+                </p>
             </section>
 
             <section id="section7" class="card">
