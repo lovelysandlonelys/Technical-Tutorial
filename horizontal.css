@@ -155,6 +155,24 @@ pre code {
     height: auto;
 }
 
+.vscode-graph {
+    display: block;
+    margin: 10px auto;
+    max-width: 800px; /* Set the maximum width for the logo */
+    height: auto;
+}
+
+.vscode-small {
+    display: block;
+    margin: 10px auto;
+    max-width: 1600px; /* Set the maximum width for the logo */
+    height: auto;
+}
+
+a {
+    color: #b5d2ed;
+}
+
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
